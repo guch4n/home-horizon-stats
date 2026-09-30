@@ -43,8 +43,8 @@ export function calculateLeadMetrics(leads: Lead[]) {
 
   const topEntry = <T extends string>(entries: Record<T, number>): T | null => {
     const sorted = Object.entries(entries) as [T, number][];
-    const [winner, count] = sorted.sort((a, b) => b[1] - a[1])[0] ?? [];
-    return count > 0 ? winner : null;
+    const top = sorted.sort((a, b) => b[1] - a[1])[0];
+    return top && top[1] > 0 ? top[0] : null;
   };
 
   const total = leads.length;

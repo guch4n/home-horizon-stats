@@ -32,13 +32,16 @@ import { cn } from "@/lib/utils";
 
 const leadsQuery = queryOptions({ queryKey: ["leads"], queryFn: () => getLeads() });
 
-type LeadSearch = { status?: LeadStatus; busca?: string };
+type LeadSearch = { status: LeadStatus | undefined; busca: string | undefined };
 
 export const Route = createFileRoute("/")({
   validateSearch: (search: Record<string, unknown>): LeadSearch => ({
     status:
-      typeof search.status === "string" && isLeadStatus(search.status) ? search.status : undefined,
-    busca: typeof search.busca === "string" && search.busca ? search.busca : undefined,
+      typeof search["status"] === "string" && isLeadStatus(search["status"])
+        ? search["status"]
+        : undefined,
+    busca:
+      typeof search["busca"] === "string" && search["busca"] ? search["busca"] : undefined,
   }),
   loader: ({ context }) => context.queryClient.ensureQueryData(leadsQuery),
   component: Dashboard,
