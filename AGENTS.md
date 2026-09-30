@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+# Architecture decisions
+- Use Lovable Cloud as the persistent source for lead records; it provides secure managed data access.
+- Keep dashboard calculations in pure client-safe utilities fed exclusively by fetched lead records; this makes every metric consistent and testable.
