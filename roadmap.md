@@ -1,7 +1,7 @@
 # CRM de leads CRI
 
-- [ ] Ativar a fonte de dados na nuvem
-- [ ] Analisar a referência visual da CRI
-- [ ] Criar estrutura de dados e acesso seguro
-- [ ] Construir painel, filtros, tabela e gráficos
-- [ ] Validar carregamento, erros e responsividade
+- [x] Ativar a fonte de dados na nuvem
+- [x] Analisar a referência visual da CRI
+- [x] Criar estrutura de dados e acesso seguro
+- [x] Construir painel, filtros, tabela e gráficos
+- [x] Validar carregamento, erros e responsividade
