@@ -8,7 +8,7 @@ O sistema será um pequeno CRM/dashboard para visualização dos leads cadastrad
 
 A aplicação NÃO precisa permitir o cadastro de novos leads neste momento.
 
-O principal objetivo é:
+O principal objetivo é :
 
 Listar os leads existentes;
 
