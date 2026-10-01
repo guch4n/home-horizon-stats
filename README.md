@@ -2,6 +2,10 @@
 
 ## Projeto online
 
+O repositório do projeto é publico e pode ser acessado através do endereço:
+
+**https://github.com/guch4n/home-horizon-stats**
+
 O projeto está hospedado na Vercel e pode ser acessado pelo link:
 
 **https://home-horizon-stats.vercel.app/**
