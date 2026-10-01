@@ -1,5 +1,15 @@
 # Case Técnico — Gestão de Leads com IA
 
+## Projeto online
+
+O projeto está hospedado na Vercel e pode ser acessado pelo link:
+
+**https://home-horizon-stats.vercel.app/**
+
+A aplicação está **funcional**, incluindo a consulta dos leads, filtros, geração de mensagens com IA e salvamento das mensagens no banco de dados.
+
+> **Observação:** eventualmente pode ocorrer uma pequena lentidão na atualização da mensagem salva pelo agente no banco de dados. Em alguns casos, após salvar uma mensagem, ao atualizar a página pela primeira vez ela pode continuar exibindo a versão anterior. Após alguns instantes, uma nova atualização da página normalmente apresenta a mensagem atualizada. Isso está relacionado ao tempo de processamento/atualização dos dados entre a aplicação e o banco.
+
 ## O que eu construí
 
 Desenvolvi uma aplicação para gerenciamento de leads de uma imobiliária, com o objetivo de centralizar as informações dos contatos e facilitar o acompanhamento comercial.
@@ -89,7 +99,7 @@ Esse resultado mostra como uma análise simples do banco pode revelar diferença
 
 ## Dificuldades encontradas
 
-Uma das principais dificuldades foi justamente a integração do banco de dados com o projeto dentro do Lovable. Fiz diversas tentativas para conectar e fazer toda a comunicação funcionar corretamente, mas encontrei problemas que acabaram tornando o processo mais demorado do que o desenvolvimento da própria funcionalidade. 
+Uma das principais dificuldades foi justamente a integração do banco de dados com o projeto dentro do Lovable. Fiz diversas tentativas para conectar e fazer toda a comunicação funcionar corretamente, mas encontrei problemas que acabaram tornando o processo mais demorado do que o desenvolvimento da própria funcionalidade.
 
 Depois de algumas tentativas, optei por salvar o projeto localmente e continuar o desenvolvimento no meu ambiente. Isso me deu mais controle sobre os arquivos, variáveis de ambiente, chamadas para o Supabase e principalmente sobre a Edge Function responsável pela integração com a IA.
 
