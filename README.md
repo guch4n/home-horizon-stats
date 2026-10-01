@@ -89,7 +89,7 @@ Esse resultado mostra como uma análise simples do banco pode revelar diferença
 
 ## Dificuldades encontradas
 
-Uma das principais dificuldades foi justamente a integração do banco de dados com o projeto dentro do Lovable. Fiz diversas tentativas para conectar e fazer toda a comunicação funcionar corretamente, mas encontrei problemas que acabaram tornando o processo mais demorado do que o desenvolvimento da própria funcionalidade.
+Uma das principais dificuldades foi justamente a integração do banco de dados com o projeto dentro do Lovable. Fiz diversas tentativas para conectar e fazer toda a comunicação funcionar corretamente, mas encontrei problemas que acabaram tornando o processo mais demorado do que o desenvolvimento da própria funcionalidade. 
 
 Depois de algumas tentativas, optei por salvar o projeto localmente e continuar o desenvolvimento no meu ambiente. Isso me deu mais controle sobre os arquivos, variáveis de ambiente, chamadas para o Supabase e principalmente sobre a Edge Function responsável pela integração com a IA.
 
