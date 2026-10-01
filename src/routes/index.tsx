@@ -29,6 +29,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { GenerateLeadMessageButton } from "@/components/GenerateLeadMessageButton";
 
 const leadsQuery = queryOptions({ queryKey: ["leads"], queryFn: () => getLeads() });
 
@@ -196,8 +197,11 @@ function LeadTable({ leads }: { leads: Lead[] }) {
     <div className="overflow-hidden rounded-lg border border-border bg-card shadow-sm">
       <div className="hidden overflow-x-auto md:block">
         <table className="w-full min-w-[980px] border-collapse text-left">
-          <thead><tr className="border-b border-border bg-muted/60 text-xs text-muted-foreground"><Th>Nome</Th><Th>Telefone</Th><Th>Origem</Th><Th>Status</Th><Th>Data de criação</Th><Th>Imóvel de interesse</Th></tr></thead>
-          <tbody>{leads.map((lead) => <tr key={lead.id} className="border-b border-border/70 last:border-0 hover:bg-muted/35"><Td><span className="font-semibold text-foreground">{lead.nome}</span></Td><Td>{lead.telefone}</Td><Td><OriginBadge value={lead.origem_do_lead} /></Td><Td><StatusBadge value={lead.status} /></Td><Td>{formatDate(lead.data_de_criacao)}</Td><Td><span className="line-clamp-2 max-w-xs">{lead.imovel_de_interesse}</span></Td></tr>)}</tbody>
+          <thead><tr className="border-b border-border bg-muted/60 text-xs text-muted-foreground"><Th>Nome</Th><Th>Telefone</Th><Th>Origem</Th><Th>Status</Th><Th>Data de criação</Th><Th>Imóvel de interesse</Th><Th>Mensagem IA</Th></tr></thead>
+          <tbody>{leads.map((lead) => <tr key={lead.id} className="border-b border-border/70 last:border-0 hover:bg-muted/35"><Td><span className="font-semibold text-foreground">{lead.nome}</span></Td><Td>{lead.telefone}</Td><Td><OriginBadge value={lead.origem_do_lead} /></Td><Td><StatusBadge value={lead.status} /></Td><Td>{formatDate(lead.data_de_criacao)}</Td><Td><span className="line-clamp-2 max-w-xs">{lead.imovel_de_interesse}</span></Td><Td><GenerateLeadMessageButton
+  leadId={lead.id}
+  mensagemSalva={lead.mensagem_ia}
+/></Td></tr>)}</tbody>
         </table>
       </div>
       <div className="divide-y divide-border md:hidden">{leads.map((lead) => <article key={lead.id} className="p-4"><div className="flex items-start justify-between gap-3"><div><p className="font-semibold">{lead.nome}</p><p className="mt-1 text-sm text-muted-foreground">{lead.telefone}</p></div><StatusBadge value={lead.status} /></div><div className="mt-4 flex flex-wrap items-center gap-2"><OriginBadge value={lead.origem_do_lead} /><span className="text-xs text-muted-foreground">{formatDate(lead.data_de_criacao)}</span></div><div className="mt-4 flex gap-2 border-t border-border pt-3 text-sm"><Building2 className="mt-0.5 size-4 shrink-0 text-primary" /><span>{lead.imovel_de_interesse}</span></div></article>)}</div>

@@ -28,7 +28,7 @@ export const getLeads = createServerFn({
   } = await client
     .from("leads")
     .select(
-      "id,nome,telefone,origem_do_lead,status,data_de_criacao,imovel_de_interesse"
+      "id,nome,telefone,origem_do_lead,status,data_de_criacao,imovel_de_interesse,mensagem_ia,mensagem_ia_gerada_em"
     )
     .order("data_de_criacao", {
       ascending: false,

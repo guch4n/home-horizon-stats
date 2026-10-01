@@ -35,3 +35,7 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+
+# Adições manuais
+supabase/functions/.env

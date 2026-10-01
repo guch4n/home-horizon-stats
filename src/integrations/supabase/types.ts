@@ -23,6 +23,8 @@ export type Database = {
           origem_do_lead: string
           status: string
           telefone: string
+          mensagem_ia: string | null
+          mensagem_ia_gerada_em: string | null
         }
         Insert: {
           data_de_criacao?: string
@@ -32,6 +34,8 @@ export type Database = {
           origem_do_lead: string
           status: string
           telefone: string
+          mensagem_ia: string | null
+          mensagem_ia_gerada_em: string | null          
         }
         Update: {
           data_de_criacao?: string
@@ -41,6 +45,8 @@ export type Database = {
           origem_do_lead?: string
           status?: string
           telefone?: string
+          mensagem_ia: string | null
+          mensagem_ia_gerada_em: string | null          
         }
         Relationships: []
       }
